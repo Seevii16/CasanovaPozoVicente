@@ -1,8 +1,9 @@
 package bbdd;
+
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class conexion {
+public class Conexion {
 	static String timeZone = "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	static String dbName = "poyectoprogramacion";
 	static String url = "jdbc:mysql://localhost:3306/" + dbName + timeZone;
