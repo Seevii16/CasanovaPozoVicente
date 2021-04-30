@@ -13,6 +13,10 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextPane;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import java.awt.Toolkit;
 
 public class MainMenu extends JFrame {
 
@@ -27,6 +31,8 @@ public class MainMenu extends JFrame {
 				try {
 					MainMenu frame = new MainMenu();
 					frame.setVisible(true);
+					
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -38,6 +44,9 @@ public class MainMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public MainMenu() {
+		setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		setTitle("MenuPrincipal");
+		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 739, 480);
 		contentPane = new JPanel();
@@ -46,6 +55,10 @@ public class MainMenu extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
+		/*Image icon = Toolkit.getDefaultToolkit().getImage("src\imagenes\icon.png"); 
+        frame.setIconImage(icon); */
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(173, 55, 540, 375);
 		contentPane.add(panel_1);
@@ -53,28 +66,34 @@ public class MainMenu extends JFrame {
 		
 		
 		JButton btnNewButton_2 = new JButton("");
-		btnNewButton_2.setBounds(35, 35, 144, 132);
+		btnNewButton_2.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\Kimetsu_no_Yaiba.png"));
+		btnNewButton_2.setBounds(10, 11, 144, 229);
 		panel_1.add(btnNewButton_2);
 		
-		JButton btnNewButton_2_1 = new JButton("New button");
-		btnNewButton_2_1.setBounds(202, 35, 144, 132);
+		JLabel lblNewLabel_1 = new JLabel("Kimetsu no Yaiba");
+		lblNewLabel_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		lblNewLabel_1.setBounds(30, 241, 108, 14);
+		panel_1.add(lblNewLabel_1);
+		
+		JButton btnNewButton_2_1 = new JButton("");
+		btnNewButton_2_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\One Piece.png"));
+		btnNewButton_2_1.setBounds(164, 11, 144, 229);
 		panel_1.add(btnNewButton_2_1);
 		
-		JButton btnNewButton_2_2 = new JButton("New button");
-		btnNewButton_2_2.setBounds(366, 35, 144, 132);
+		JLabel lblNewLabel_1_1 = new JLabel("         One Piece");
+		lblNewLabel_1_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		lblNewLabel_1_1.setBounds(174, 241, 108, 14);
+		panel_1.add(lblNewLabel_1_1);
+		
+		JButton btnNewButton_2_2 = new JButton("");
+		btnNewButton_2_2.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\dragon_ball_super.jpg"));
+		btnNewButton_2_2.setBounds(318, 11, 144, 229);
 		panel_1.add(btnNewButton_2_2);
 		
-		JButton btnNewButton_2_3 = new JButton("New button");
-		btnNewButton_2_3.setBounds(35, 198, 144, 132);
-		panel_1.add(btnNewButton_2_3);
-		
-		JButton btnNewButton_2_1_1 = new JButton("New button");
-		btnNewButton_2_1_1.setBounds(202, 198, 144, 132);
-		panel_1.add(btnNewButton_2_1_1);
-		
-		JButton btnNewButton_2_2_1 = new JButton("New button");
-		btnNewButton_2_2_1.setBounds(366, 198, 144, 132);
-		panel_1.add(btnNewButton_2_2_1);
+		JLabel lblNewLabel_1_1_1 = new JLabel("Dragon Ball Super");
+		lblNewLabel_1_1_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		lblNewLabel_1_1_1.setBounds(342, 241, 120, 14);
+		panel_1.add(lblNewLabel_1_1_1);
 		
 		
 		JPanel panel_2 = new JPanel();
@@ -84,13 +103,19 @@ public class MainMenu extends JFrame {
 		panel_2.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Inicio Sesion");
-		btnNewButton.setBackground(new Color(51, 204, 51));
+		btnNewButton.setBackground(new Color(255, 255, 255));
 		btnNewButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		btnNewButton.setBounds(300, 0, 115, 33);
 		panel_2.add(btnNewButton);
 		
 		JButton btnRegistro = new JButton("Registro");
-		btnRegistro.setBackground(new Color(51, 204, 51));
+		btnRegistro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Registro frame = new Registro();
+				frame.setVisible(true);
+			}
+		});
+		btnRegistro.setBackground(new Color(255, 255, 255));
 		btnRegistro.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		btnRegistro.setBounds(425, 0, 115, 33);
 		panel_2.add(btnRegistro);
