@@ -18,10 +18,9 @@ import java.awt.event.ActionEvent;
 public class Registro extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JPasswordField textField_2;
-
+	private JTextField contraseniaInput;
+	private JTextField usuarioInput;
+	private JTextField emailInput;
 	/**
 	 * Launch the application.
 	 */
@@ -43,59 +42,66 @@ public class Registro extends JFrame {
 	 */
 	public Registro() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
-		setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		setTitle("Registro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 641, 425);
+		setBounds(100, 100, 607, 456);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Atras\r\n");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				Menu1 frame = new Menu1();
+		JPanel panel = new JPanel();
+		contentPane.add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
+		
+		contraseniaInput = new JTextField();
+		contraseniaInput.setBounds(115, 124, 190, 20);
+		panel.add(contraseniaInput);
+		contraseniaInput.setColumns(10);
+		
+		usuarioInput = new JTextField();
+		usuarioInput.setColumns(10);
+		usuarioInput.setBounds(115, 62, 190, 20);
+		panel.add(usuarioInput);
+		
+		JLabel usuarioLabel = new JLabel("Usuario");
+		usuarioLabel.setBounds(115, 37, 46, 14);
+		panel.add(usuarioLabel);
+		
+		JLabel contraseniaLabel = new JLabel("Contrase\u00F1a");
+		contraseniaLabel.setBounds(115, 99, 76, 14);
+		panel.add(contraseniaLabel);
+		
+		JButton insertButton = new JButton("Siguiente");
+		insertButton.setBounds(399, 268, 89, 23);
+		panel.add(insertButton);
+		
+		JLabel emailLabel = new JLabel("Email");
+		emailLabel.setBounds(115, 170, 76, 14);
+		panel.add(emailLabel);
+		
+		emailInput = new JTextField();
+		emailInput.setColumns(10);
+		emailInput.setBounds(115, 195, 190, 20);
+		panel.add(emailInput);
+		
+		// Acciones
+		
+	
+		
+		insertButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String user = usuarioInput.getText();
+				String password = contraseniaInput.getText();
+				String email = emailInput.getText();
+				new controlador.Login().insertarUsuario(user, password,email);
+				
+				MainMenu frame = new MainMenu();
 				frame.setVisible(true);
+				
 			}
 		});
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton.setBounds(10, 343, 79, 32);
-		contentPane.add(btnNewButton);
 		
-		JLabel lblNewLabel = new JLabel("Nombre\r\n");
-		lblNewLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		lblNewLabel.setBounds(130, 55, 55, 24);
-		contentPane.add(lblNewLabel);
 		
-		textField = new JTextField();
-		textField.setBounds(213, 59, 251, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
-		
-		JLabel lblEmail = new JLabel("Email\r\n");
-		lblEmail.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		lblEmail.setBounds(130, 108, 55, 24);
-		contentPane.add(lblEmail);
-		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(213, 112, 251, 20);
-		contentPane.add(textField_1);
-		
-		JLabel lblContrasea = new JLabel("Contrase\u00F1a\r\n");
-		lblContrasea.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		lblContrasea.setBounds(130, 158, 79, 24);
-		contentPane.add(lblContrasea);
-		
-		textField_2 = new JPasswordField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(213, 160, 251, 20);
-		contentPane.add(textField_2);
-		
-		JButton btnNewButton_1 = new JButton("Siguiente\r\n");
-		btnNewButton_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton_1.setBounds(444, 220, 98, 32);
-		contentPane.add(btnNewButton_1);
 	}
 }

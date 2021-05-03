@@ -59,6 +59,7 @@ public class Menu1 extends JFrame {
 		btnRegistro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Registro frame = new Registro();
+				frame.setVisible(true);
 			}
 		});
 		contentPane.add(btnRegistro);

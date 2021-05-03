@@ -5,9 +5,13 @@ public class Usuario {
   int idUsuario;
   String nombre;
   String email;
-  String contraseña;
+  String contrasenia;
 
-  public int getIdUsuario() {
+  public Usuario(int idUsuario2, String nombre2, String contrasenia, String email2) {
+	// TODO Auto-generated constructor stub
+}
+
+public int getIdUsuario() {
     return idUsuario;
   }
 
@@ -31,11 +35,11 @@ public class Usuario {
     this.email = email;
   }
 
-  public String getContraseña() {
-    return contraseña;
+  public String getContrasenia() {
+    return contrasenia;
   }
 
-  public void setContraseña(String contraseña) {
-    this.contraseña = contraseña;
+  public void setContrasenia(String contrasenia) {
+    this.contrasenia = contrasenia;
   }
 }
