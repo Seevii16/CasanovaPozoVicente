@@ -2,13 +2,14 @@ package main;
 
 import bbdd.Conexion;
 import vista.MainMenu;
+import vista.Menu1;
 
 public class Main {
 	
 	public static void main(String[] args) {
 		
 		Conexion.Conectar();
-		MainMenu frame = new MainMenu();
+		Menu1 frame = new Menu1();
 		frame.setVisible(true);
 	}
 
