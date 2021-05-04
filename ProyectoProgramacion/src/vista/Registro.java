@@ -14,11 +14,13 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import java.awt.Color;
 
 public class Registro extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField contraseniaInput;
+	private JPasswordField contraseniaInput;
 	private JTextField usuarioInput;
 	private JTextField emailInput;
 	/**
@@ -54,36 +56,53 @@ public class Registro extends JFrame {
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		contraseniaInput = new JTextField();
-		contraseniaInput.setBounds(115, 124, 190, 20);
+		contraseniaInput = new JPasswordField();
+		contraseniaInput.setBounds(315, 125, 190, 20);
 		panel.add(contraseniaInput);
 		contraseniaInput.setColumns(10);
 		
 		usuarioInput = new JTextField();
+		usuarioInput.setBounds(315, 63, 190, 20);
 		usuarioInput.setColumns(10);
-		usuarioInput.setBounds(115, 62, 190, 20);
 		panel.add(usuarioInput);
 		
 		JLabel usuarioLabel = new JLabel("Usuario");
-		usuarioLabel.setBounds(115, 37, 46, 14);
+		usuarioLabel.setForeground(Color.WHITE);
+		usuarioLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		usuarioLabel.setBounds(315, 46, 76, 14);
 		panel.add(usuarioLabel);
 		
 		JLabel contraseniaLabel = new JLabel("Contrase\u00F1a");
-		contraseniaLabel.setBounds(115, 99, 76, 14);
+		contraseniaLabel.setForeground(Color.WHITE);
+		contraseniaLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		contraseniaLabel.setBounds(315, 100, 76, 14);
 		panel.add(contraseniaLabel);
 		
 		JButton insertButton = new JButton("Siguiente");
-		insertButton.setBounds(399, 268, 89, 23);
+		insertButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		insertButton.setBounds(457, 266, 89, 23);
 		panel.add(insertButton);
 		
 		JLabel emailLabel = new JLabel("Email");
-		emailLabel.setBounds(115, 170, 76, 14);
+		emailLabel.setForeground(Color.WHITE);
+		emailLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		emailLabel.setBounds(315, 167, 76, 14);
 		panel.add(emailLabel);
 		
 		emailInput = new JTextField();
+		emailInput.setBounds(315, 194, 190, 20);
 		emailInput.setColumns(10);
-		emailInput.setBounds(115, 195, 190, 20);
 		panel.add(emailInput);
+		
+		JLabel lblNewLabel = new JLabel("\r\n");
+		lblNewLabel.setBounds(0, 0, 305, 407);
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\rengokugif.gif"));
+		panel.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\humo roj - copia.jpg"));
+		lblNewLabel_1.setBounds(306, 0, 275, 407);
+		panel.add(lblNewLabel_1);
 		
 		// Acciones
 		
@@ -96,7 +115,7 @@ public class Registro extends JFrame {
 				String email = emailInput.getText();
 				new controlador.Login().insertarUsuario(user, password,email);
 				
-				MainMenu frame = new MainMenu();
+				RegistroCompletado frame = new RegistroCompletado();
 				frame.setVisible(true);
 				
 			}

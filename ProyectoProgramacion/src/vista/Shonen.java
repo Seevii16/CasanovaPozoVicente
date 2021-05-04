@@ -97,30 +97,6 @@ public class Shonen extends JFrame {
 		contentPane.add(panel_2);
 		panel_2.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Inicio Sesion");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				InicioSesion frame = new InicioSesion();
-				frame.setVisible(true);
-			}
-		});
-		btnNewButton.setBackground(new Color(255, 255, 255));
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton.setBounds(300, 0, 115, 33);
-		panel_2.add(btnNewButton);
-		
-		JButton btnRegistro = new JButton("Registro");
-		btnRegistro.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				Registro frame = new Registro();
-				frame.setVisible(true);
-			}
-		});
-		btnRegistro.setBackground(new Color(255, 255, 255));
-		btnRegistro.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnRegistro.setBounds(425, 0, 115, 33);
-		panel_2.add(btnRegistro);
-		
 		JLabel lblMangasPopulares = new JLabel("     Genero Shonen");
 		lblMangasPopulares.setBackground(new Color(153, 204, 255));
 		lblMangasPopulares.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
