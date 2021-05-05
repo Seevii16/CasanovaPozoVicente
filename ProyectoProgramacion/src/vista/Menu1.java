@@ -39,6 +39,8 @@ public class Menu1 extends JFrame {
 	 * Create the frame.
 	 */
 	public Menu1() {
+
+		setResizable(false);
 		setTitle("Menu");
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
 		setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
@@ -55,9 +57,11 @@ public class Menu1 extends JFrame {
 		panel.setLayout(null);
 		
 		JButton btnRegistro = new JButton("Registro\r\n");
+		btnRegistro.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		btnRegistro.setBounds(318, 185, 149, 35);
 		btnRegistro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				dispose();
 				Registro frame = new Registro();
 				frame.setVisible(true);
 			}
@@ -65,9 +69,11 @@ public class Menu1 extends JFrame {
 		contentPane.add(btnRegistro);
 		
 		JButton btnNewButton = new JButton("Inicio de Sesion\r\n");
+		btnNewButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		btnNewButton.setBounds(318, 106, 149, 35);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				dispose();
 				InicioSesion frame = new InicioSesion();
 				frame.setVisible(true);
 			}
@@ -81,7 +87,7 @@ public class Menu1 extends JFrame {
 		
 		
 		JLabel lblNewLabel_1 = new JLabel("\r\n");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\humo roj.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_menu1.jpg"));
 		lblNewLabel_1.setBounds(310, 0, 167, 329);
 		contentPane.add(lblNewLabel_1);
 	

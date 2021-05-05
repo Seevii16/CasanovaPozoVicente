@@ -30,6 +30,7 @@ public class Registro extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+				
 					Registro frame = new Registro();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -43,6 +44,7 @@ public class Registro extends JFrame {
 	 * Create the frame.
 	 */
 	public Registro() {
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
 		setTitle("Registro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -80,7 +82,7 @@ public class Registro extends JFrame {
 		
 		JButton insertButton = new JButton("Siguiente");
 		insertButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		insertButton.setBounds(457, 266, 89, 23);
+		insertButton.setBounds(446, 266, 100, 23);
 		panel.add(insertButton);
 		
 		JLabel emailLabel = new JLabel("Email");
@@ -100,7 +102,7 @@ public class Registro extends JFrame {
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\humo roj - copia.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_registro.jpg"));
 		lblNewLabel_1.setBounds(306, 0, 275, 407);
 		panel.add(lblNewLabel_1);
 		
@@ -117,6 +119,7 @@ public class Registro extends JFrame {
 				
 				RegistroCompletado frame = new RegistroCompletado();
 				frame.setVisible(true);
+				dispose();
 				
 			}
 		});

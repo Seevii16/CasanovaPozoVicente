@@ -1,21 +1,21 @@
 package vista;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Toolkit;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Font;
-import java.awt.Color;
 
-public class RegistroCompletado extends JFrame {
+public class LoginCompletado extends JFrame {
 
 	private JPanel contentPane;
 
@@ -26,7 +26,7 @@ public class RegistroCompletado extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					RegistroCompletado frame = new RegistroCompletado();
+					LoginCompletado frame = new LoginCompletado();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,10 +38,10 @@ public class RegistroCompletado extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public RegistroCompletado() {
+	public LoginCompletado() {
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
-		setTitle("Registro completado :D");
+		setTitle("Inicio Sesion completado :D");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 533, 368);
 		contentPane = new JPanel();
@@ -66,9 +66,9 @@ public class RegistroCompletado extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\dance.gif"));
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Te has registrado con \r\n ");
+		JLabel lblNewLabel_1 = new JLabel("Has iniciado sesion con \r\n ");
 		lblNewLabel_1.setForeground(Color.WHITE);
-		lblNewLabel_1.setBounds(264, 84, 223, 60);
+		lblNewLabel_1.setBounds(264, 84, 241, 60);
 		lblNewLabel_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 21));
 		contentPane.add(lblNewLabel_1);
 		
@@ -84,3 +84,4 @@ public class RegistroCompletado extends JFrame {
 		contentPane.add(lblNewLabel_2);
 	}
 }
+
