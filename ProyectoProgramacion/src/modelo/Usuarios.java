@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import beans.Usuario;
 
 public class Usuarios {
-	double idAleatorio = Math.floor(Math.random()*10);
+
 	
 	public ArrayList<Usuario> gets() {
 		ResultSet resultados = Conexion.EjecutarSentencia("SELECT * FROM usuarios");
@@ -16,15 +16,17 @@ public class Usuarios {
 		return usuarios;
 	}
 	
-	public Usuario getUsuarioConNimbreYContraseña(String nombre, String contrasenia) {
-		ResultSet usuarioBD = Conexion.EjecutarSentencia("SELECT * FROM usuarios WHERE NOMBRE='"+nombre+"' AND CONTRASEÑA='"+contrasenia+"'");
+	public Usuario getNombreContrasenia(String nombre, String contrasenia) {
+		ResultSet usuarioBD = Conexion.EjecutarSentencia("SELECT * FROM usuarios WHERE NOMBRE='"+nombre+"' AND CONTRASEÑA='"+contrasenia+"' ;");
 		Usuario usuario = new controlador.Helper().resultSet2Object(usuarioBD);
+		System.out.println(usuario);
 		return usuario;
 	}
 	
-	public boolean checkUserAndPass(String nombre, String contrasenia) {
-		ResultSet usuarioBD = Conexion.EjecutarSentencia("SELECT * FROM usuarios WHERE NOMBRE='"+nombre+"' AND CONTRASEÑA='"+contrasenia+"'");
-		
+	public boolean checkNombreContrasenia(String nombre, String contrasenia) {
+		System.out.println("SELECT * FROM usuarios WHERE NOMBRE='"+nombre+"' AND CONTRASEÑA='"+contrasenia+"';");
+		ResultSet usuarioBD = Conexion.EjecutarSentencia("SELECT * FROM usuarios WHERE NOMBRE='"+nombre+"' AND CONTRASEÑA='"+contrasenia+"';");
+		System.out.println(usuarioBD.toString());
 		try {
 			return usuarioBD.next();
 		} catch (SQLException e) {
@@ -33,7 +35,7 @@ public class Usuarios {
 	}
 	
 	public void insertarUsuario(String nombre, String contrasenia,String email) {
-		Conexion.EjecutarUpdate("INSERT INTO usuarios (IDUSUARIO, NOMBRE, CONTRASEÑA,EMAIL) VALUES ('"+idAleatorio+"', '"+nombre+"', '"+contrasenia+"', '"+email+"');");
+		Conexion.EjecutarUpdate("INSERT INTO usuarios (NOMBRE, CONTRASEÑA,EMAIL) VALUES ('"+nombre+"', '"+contrasenia+"', '"+email+"');");
 	}
 	
 	public void actualizarUsuario(String nombre, String contrasenia) {
