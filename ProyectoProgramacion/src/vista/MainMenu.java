@@ -119,7 +119,7 @@ public class MainMenu extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_mainMenu.jpg"));
-		lblNewLabel.setBounds(10, 0, 695, 437);
+		lblNewLabel.setBounds(0, 0, 705, 437);
 		contentPane.add(lblNewLabel);
 		
 		
