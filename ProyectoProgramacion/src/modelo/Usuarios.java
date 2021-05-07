@@ -23,6 +23,14 @@ public class Usuarios {
 		return usuario;
 	}
 	
+	
+	public Usuario mostrarUsuario(){
+		ResultSet usuarioBD = Conexion.EjecutarSentencia("SELECT * FROM usuarios;");
+		Usuario usuario = new controlador.Helper().resultSet2Object(usuarioBD);
+		System.out.println(usuario);
+		return usuario;
+	}
+	
 	public boolean checkNombreContrasenia(String nombre, String contrasenia) {
 		System.out.println("SELECT * FROM usuarios WHERE NOMBRE='"+nombre+"' AND CONTRASEÑA='"+contrasenia+"';");
 		ResultSet usuarioBD = Conexion.EjecutarSentencia("SELECT * FROM usuarios WHERE NOMBRE='"+nombre+"' AND CONTRASEÑA='"+contrasenia+"';");

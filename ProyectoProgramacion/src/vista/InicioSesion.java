@@ -1,6 +1,9 @@
 package vista;
 
 import java.awt.BorderLayout;
+
+import sonidos.*;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -44,6 +47,9 @@ public class InicioSesion extends JFrame {
 	 * Create the frame.
 	 */
 	public InicioSesion() {
+		
+		
+		
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
 		setTitle("Inicio Sesion");

@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainMenu extends JFrame {
 
@@ -41,7 +43,7 @@ public class MainMenu extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
 		setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		setTitle("Menu Principal");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 701, 466);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -73,6 +75,12 @@ public class MainMenu extends JFrame {
 		contentPane.add(btnNewButton_2_1);
 		
 		JButton btnNewButton_3 = new JButton("");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Kimetsu frame = new Kimetsu();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_3.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\Kimetsu_no_Yaiba.png"));
 		btnNewButton_3.setBounds(206, 82, 141, 222);
 		contentPane.add(btnNewButton_3);
@@ -116,6 +124,19 @@ public class MainMenu extends JFrame {
 		lblNewLabel_1_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
 		lblNewLabel_1_1.setBounds(196, 26, 489, 57);
 		contentPane.add(lblNewLabel_1_1);
+		
+		JButton btnNewButton_4 = new JButton("Cambiar de usuario\r\n");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				InicioSesion frame = new InicioSesion();
+				frame.setVisible(true);
+				dispose();
+			}
+		});
+		btnNewButton_4.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		btnNewButton_4.setBounds(517, 388, 155, 23);
+		contentPane.add(btnNewButton_4);
+		
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_mainMenu.jpg"));

@@ -15,6 +15,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import bbdd.Conexion;
+
 public class LoginCompletado extends JFrame {
 
 	private JPanel contentPane;
@@ -82,6 +84,10 @@ public class LoginCompletado extends JFrame {
 		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_registro.jpg"));
 		lblNewLabel_2.setBounds(245, 0, 272, 329);
 		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel();
+		lblNewLabel_3.setBounds(302, 26, 46, 14);
+		contentPane.add(lblNewLabel_3);
 	}
 }
 
