@@ -7,6 +7,15 @@ public class Pago {
   Usuario idUsuario;
   String fechaPago;
   double total;
+  
+
+  public Pago(int idPago, Manga idManga, Usuario idUsuario, String fechaPago, double total) {
+    this.idPago = idPago;
+    this.idManga = idManga;
+    this.idUsuario = idUsuario;
+    this.fechaPago = fechaPago;
+    this.total = total;
+  }
 
   public int getIdPago() {
     return idPago;

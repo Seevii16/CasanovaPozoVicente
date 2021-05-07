@@ -8,7 +8,20 @@ public class Manga {
   String genero;
   double precio;
 
-  public int getIdManga() {
+
+
+public Manga(int idManga, String titulo, String descripcion, String genero, double precio) {
+    this.idManga = idManga;
+    this.titulo = titulo;
+    this.descripcion = descripcion;
+    this.genero = genero;
+    this.precio = precio;
+  }
+
+public Manga(int idManga, String titulo, String descripcion, Double precio) {
+}
+
+public int getIdManga() {
     return idManga;
   }
 

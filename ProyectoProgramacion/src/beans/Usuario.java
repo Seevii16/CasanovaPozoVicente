@@ -7,9 +7,14 @@ public class Usuario {
   String email;
   String contrasenia;
 
-  public Usuario(int idUsuario2, String nombre2, String contrasenia, String email2) {
-	// TODO Auto-generated constructor stub
-}
+  public Usuario(int idUsuario, String nombre, String email, String contrasenia) {
+    this.idUsuario = idUsuario;
+    this.nombre = nombre;
+    this.email = email;
+    this.contrasenia = contrasenia;
+  }
+
+ 
 
 public int getIdUsuario() {
     return idUsuario;
