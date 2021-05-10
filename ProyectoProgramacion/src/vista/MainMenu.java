@@ -40,7 +40,7 @@ public class MainMenu extends JFrame {
 	 */
 	public MainMenu() {
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(".\\src\\imagenes\\icono.png"));
 		setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		setTitle("Menu Principal");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -81,17 +81,17 @@ public class MainMenu extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton_3.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\Kimetsu_no_Yaiba.png"));
+		btnNewButton_3.setIcon(new ImageIcon(".\\src\\imagenes\\Kimetsu_no_Yaiba.png"));
 		btnNewButton_3.setBounds(206, 82, 141, 222);
 		contentPane.add(btnNewButton_3);
 		
 		JButton btnNewButton_3_1 = new JButton("");
-		btnNewButton_3_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\One Piece.png"));
+		btnNewButton_3_1.setIcon(new ImageIcon(".\\src\\imagenes\\One Piece.png"));
 		btnNewButton_3_1.setBounds(368, 82, 141, 222);
 		contentPane.add(btnNewButton_3_1);
 		
 		JButton btnNewButton_3_2 = new JButton("");
-		btnNewButton_3_2.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\dragon_ball_super.jpg"));
+		btnNewButton_3_2.setIcon(new ImageIcon(".\\src\\imagenes\\dragon_ball_super.jpg"));
 		btnNewButton_3_2.setBounds(531, 82, 141, 222);
 		contentPane.add(btnNewButton_3_2);
 		
@@ -139,7 +139,7 @@ public class MainMenu extends JFrame {
 		
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_mainMenu.jpg"));
+		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_mainMenu.jpg"));
 		lblNewLabel.setBounds(0, 0, 705, 437);
 		contentPane.add(lblNewLabel);
 		

@@ -92,11 +92,11 @@ public class InicioSesion extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("\r\n");
 		lblNewLabel.setBounds(0, 0, 305, 407);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\rengokugif.gif"));
+		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\rengokugif.gif"));
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_registro.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_registro.jpg"));
 		lblNewLabel_1.setBounds(306, 0, 275, 407);
 		panel.add(lblNewLabel_1);
 		

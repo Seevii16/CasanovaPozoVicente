@@ -45,7 +45,7 @@ public class Registro extends JFrame {
 	 */
 	public Registro() {
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(".\\src\\imagenes\\icono.png"));
 		setTitle("Registro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 607, 456);
@@ -74,7 +74,7 @@ public class Registro extends JFrame {
 		usuarioLabel.setBounds(315, 46, 76, 14);
 		panel.add(usuarioLabel);
 		
-		JLabel contraseniaLabel = new JLabel("Contrase\u00F1a");
+		JLabel contraseniaLabel = new JLabel("Contrase\u00F1a"); /* contraseña */
 		contraseniaLabel.setForeground(Color.WHITE);
 		contraseniaLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		contraseniaLabel.setBounds(315, 100, 76, 14);
@@ -98,11 +98,11 @@ public class Registro extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("\r\n");
 		lblNewLabel.setBounds(0, 0, 305, 407);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\rengokugif.gif"));
+		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\rengokugif.gif"));
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_registro.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_registro.jpg"));
 		lblNewLabel_1.setBounds(306, 0, 275, 407);
 		panel.add(lblNewLabel_1);
 		
@@ -110,7 +110,7 @@ public class Registro extends JFrame {
 		
 	
 		
-		insertButton.addActionListener(new ActionListener() {
+		insertButton.addActionListener(new ActionListener() { /* Este boton te permite añadir un usuario */
 			public void actionPerformed(ActionEvent e) {
 				String user = usuarioInput.getText();
 				String password = contraseniaInput.getText();

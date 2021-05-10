@@ -40,7 +40,7 @@ public class FalloInicioSesion extends JFrame {
 	 */
 	public FalloInicioSesion() {
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(".\\src\\imagenes\\icono.png"));
 		setTitle("No se encontro el usuario :c");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 533, 368);
@@ -75,10 +75,10 @@ public class FalloInicioSesion extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("\r\n");
 		lblNewLabel.setBounds(0, 0, 245, 328);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\cry.gif"));
+		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\cry.gif"));
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Nombre o contrase\u00F1a");
+		JLabel lblNewLabel_1 = new JLabel("Nombre o contrase\u00F1a"); /* Nombre o contraseña */
 		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setBounds(274, 11, 223, 60);
 		lblNewLabel_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 21));
@@ -91,7 +91,7 @@ public class FalloInicioSesion extends JFrame {
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_registro.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_registro.jpg"));
 		lblNewLabel_2.setBounds(245, 0, 272, 329);
 		contentPane.add(lblNewLabel_2);
 		

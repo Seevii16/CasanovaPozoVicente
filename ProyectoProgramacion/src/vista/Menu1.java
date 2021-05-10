@@ -42,7 +42,7 @@ public class Menu1 extends JFrame {
 
 		setResizable(false);
 		setTitle("Menu");
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(".\\src\\imagenes\\icono.png"));
 		setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 493, 368);
@@ -81,13 +81,13 @@ public class Menu1 extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("\r\n");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\rengoku.gif"));
+		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\rengoku.gif"));
 		lblNewLabel.setBounds(0, 0, 308, 329);
 		panel.add(lblNewLabel);
 		
 		
 		JLabel lblNewLabel_1 = new JLabel("\r\n");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_menu1.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_menu1.jpg"));
 		lblNewLabel_1.setBounds(310, 0, 167, 329);
 		contentPane.add(lblNewLabel_1);
 	

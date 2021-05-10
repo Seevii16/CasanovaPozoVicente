@@ -65,7 +65,7 @@ public class LoginCompletado extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("\r\n");
 		lblNewLabel.setBounds(0, 0, 241, 329);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\dance.gif"));
+		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\dance.gif"));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Has iniciado sesion con \r\n ");
@@ -81,7 +81,7 @@ public class LoginCompletado extends JFrame {
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_registro.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_registro.jpg"));
 		lblNewLabel_2.setBounds(245, 0, 272, 329);
 		contentPane.add(lblNewLabel_2);
 		

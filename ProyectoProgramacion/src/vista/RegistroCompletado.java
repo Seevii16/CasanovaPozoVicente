@@ -40,7 +40,7 @@ public class RegistroCompletado extends JFrame {
 	 */
 	public RegistroCompletado() {
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(".\\src\\imagenes\\icono.png"));
 		setTitle("Registro completado :D");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 533, 368);
@@ -63,7 +63,7 @@ public class RegistroCompletado extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("\r\n");
 		lblNewLabel.setBounds(0, 0, 241, 329);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\dance.gif"));
+		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\dance.gif"));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Te has registrado con \r\n ");
@@ -79,7 +79,7 @@ public class RegistroCompletado extends JFrame {
 		contentPane.add(lblNewLabel_1_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fondo_registro.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_registro.jpg"));
 		lblNewLabel_2.setBounds(245, 0, 272, 329);
 		contentPane.add(lblNewLabel_2);
 	}
