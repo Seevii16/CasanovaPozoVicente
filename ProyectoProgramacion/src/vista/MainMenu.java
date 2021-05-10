@@ -1,5 +1,6 @@
 package vista;
-
+import vista.Generos.*;
+import vista.Generos.Mangas.*;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -61,11 +62,23 @@ public class MainMenu extends JFrame {
 		btnNewButton.setBounds(22, 82, 164, 57);
 		contentPane.add(btnNewButton);
 		JButton btnNewButton_1 = new JButton("Shojo\r\n");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Shojo frame = new Shojo();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		btnNewButton_1.setBounds(22, 152, 164, 57);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Seinen\r\n");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Seinen frame = new Seinen();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_2.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		btnNewButton_2.setBounds(22, 220, 164, 57);
 		contentPane.add(btnNewButton_2);
@@ -92,11 +105,23 @@ public class MainMenu extends JFrame {
 		contentPane.add(btnNewButton_3);
 		
 		JButton btnNewButton_3_1 = new JButton("");
+		btnNewButton_3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				OnePiece frame = new OnePiece();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_3_1.setIcon(new ImageIcon(".\\src\\imagenes\\One Piece.png"));
 		btnNewButton_3_1.setBounds(368, 82, 141, 222);
 		contentPane.add(btnNewButton_3_1);
 		
 		JButton btnNewButton_3_2 = new JButton("");
+		btnNewButton_3_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				DragonBallSuper frame = new DragonBallSuper();
+				frame.setVisible(true);
+			}
+		});
 		btnNewButton_3_2.setIcon(new ImageIcon(".\\src\\imagenes\\dragon_ball_super.jpg"));
 		btnNewButton_3_2.setBounds(531, 82, 141, 222);
 		contentPane.add(btnNewButton_3_2);

@@ -74,7 +74,7 @@ public class Helper {
 			if (resultado.next()) {
 				int idUsuario = resultado.getInt("idUsuario");
 				String nombre = resultado.getString("nombre");
-				String contrasenia = resultado.getString("contraseï¿½a");
+				String contrasenia = resultado.getString("contraseña");
 				String email = resultado.getString("email");
 				Usuario usuario = new Usuario(idUsuario, nombre, contrasenia, email);
 				return usuario;

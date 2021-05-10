@@ -2,15 +2,15 @@ package vista.Generos.Mangas;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Toolkit;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import java.awt.Toolkit;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
 
-public class Kimetsu extends JFrame {
+public class OnePiece extends JFrame {
 
 	private JPanel contentPane;
 
@@ -21,7 +21,7 @@ public class Kimetsu extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Kimetsu frame = new Kimetsu();
+					OnePiece frame = new OnePiece();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -33,9 +33,9 @@ public class Kimetsu extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Kimetsu() {
+	public OnePiece() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(".\\src\\imagenes\\icono.png"));
-		setTitle("Kimetsu no Yaiba");
+		setTitle("OnePiece");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 694, 453);
 		contentPane = new JPanel();
@@ -44,7 +44,7 @@ public class Kimetsu extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("\r\n");
-		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\Kimetsu_no_Yaiba_2.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\One Piece.png"));
 		lblNewLabel.setBounds(0, 0, 279, 414);
 		contentPane.add(lblNewLabel);
 		
