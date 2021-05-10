@@ -1,21 +1,21 @@
 package vista;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.Font;
 import java.awt.Toolkit;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
-import java.awt.Color;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class MainMenu extends JFrame {
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class Shonen extends JFrame {
 
 	private JPanel contentPane;
 
@@ -26,7 +26,7 @@ public class MainMenu extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainMenu frame = new MainMenu();
+					Shonen frame = new Shonen();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,11 +38,11 @@ public class MainMenu extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MainMenu() {
+	public Shonen() {
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(".\\src\\imagenes\\icono.png"));
 		setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		setTitle("Menu Principal");
+		setTitle("Shonen");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 701, 466);
 		contentPane = new JPanel();
@@ -51,12 +51,7 @@ public class MainMenu extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Shonen\r\n");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				Shonen frame = new Shonen();
-				frame.setVisible(true);
-			}
-		});
+		btnNewButton.setBackground(new Color(255, 0, 0));
 		btnNewButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		btnNewButton.setBounds(22, 82, 164, 57);
 		contentPane.add(btnNewButton);
@@ -87,33 +82,33 @@ public class MainMenu extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton_3.setIcon(new ImageIcon(".\\src\\imagenes\\Kimetsu_no_Yaiba.png"));
-		btnNewButton_3.setBounds(206, 82, 141, 222);
+		btnNewButton_3.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\fullmetal.jpg"));
+		btnNewButton_3.setBounds(196, 82, 141, 222);
 		contentPane.add(btnNewButton_3);
 		
 		JButton btnNewButton_3_1 = new JButton("");
-		btnNewButton_3_1.setIcon(new ImageIcon(".\\src\\imagenes\\One Piece.png"));
+		btnNewButton_3_1.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\hunter_x_hunter.jpg"));
 		btnNewButton_3_1.setBounds(368, 82, 141, 222);
 		contentPane.add(btnNewButton_3_1);
 		
 		JButton btnNewButton_3_2 = new JButton("");
-		btnNewButton_3_2.setIcon(new ImageIcon(".\\src\\imagenes\\dragon_ball_super.jpg"));
+		btnNewButton_3_2.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\shingeki-no-kyojin.jpg"));
 		btnNewButton_3_2.setBounds(531, 82, 141, 222);
 		contentPane.add(btnNewButton_3_2);
 		
-		JLabel lblNewLabel_1_2 = new JLabel("Kimetsu no yaiba\r\n");
+		JLabel lblNewLabel_1_2 = new JLabel("Fullmetal Alchemist");
 		lblNewLabel_1_2.setForeground(Color.WHITE);
 		lblNewLabel_1_2.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
-		lblNewLabel_1_2.setBounds(216, 286, 131, 57);
+		lblNewLabel_1_2.setBounds(196, 286, 141, 57);
 		contentPane.add(lblNewLabel_1_2);
 		
-		JLabel lblNewLabel_1_2_1 = new JLabel("One Piece\r\n");
+		JLabel lblNewLabel_1_2_1 = new JLabel("Hunter x Hunter\r\n");
 		lblNewLabel_1_2_1.setForeground(Color.WHITE);
 		lblNewLabel_1_2_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
-		lblNewLabel_1_2_1.setBounds(402, 286, 85, 57);
+		lblNewLabel_1_2_1.setBounds(378, 286, 131, 57);
 		contentPane.add(lblNewLabel_1_2_1);
 		
-		JLabel lblNewLabel_1_2_1_1 = new JLabel("Dragon ball Super\r\n");
+		JLabel lblNewLabel_1_2_1_1 = new JLabel("Shingeki no Kyojin");
 		lblNewLabel_1_2_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_2_1_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
 		lblNewLabel_1_2_1_1.setBounds(541, 286, 131, 57);
@@ -125,11 +120,13 @@ public class MainMenu extends JFrame {
 		lblNewLabel_1.setBounds(24, 26, 162, 57);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Mangas Populares");
+		JLabel lblNewLabel_1_1 = new JLabel("Shonen");
 		lblNewLabel_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
 		lblNewLabel_1_1.setBounds(196, 26, 489, 57);
 		contentPane.add(lblNewLabel_1_1);
+		
+		
 		
 		JButton btnNewButton_4 = new JButton("Cambiar de usuario\r\n");
 		btnNewButton_4.addActionListener(new ActionListener() {
@@ -148,8 +145,6 @@ public class MainMenu extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_mainMenu.jpg"));
 		lblNewLabel.setBounds(0, 0, 705, 437);
 		contentPane.add(lblNewLabel);
-		
-		
 		
 		
 		
