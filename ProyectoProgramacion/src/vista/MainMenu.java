@@ -102,7 +102,7 @@ public class MainMenu extends JFrame {
 		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				String titulo = "Kimetsu_No_Yaiba";
+				String titulo = "Kimetsu No Yaiba";
 				Manga manga = new controlador.MangaInfo().getMangaInfo(titulo);
 				Kimetsu frame = new Kimetsu(manga);
 				frame.setVisible(true);
@@ -115,7 +115,9 @@ public class MainMenu extends JFrame {
 		JButton btnNewButton_3_1 = new JButton("");
 		btnNewButton_3_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				OnePiece frame = new OnePiece();
+				String titulo = "One Piece";
+				Manga manga = new controlador.MangaInfo().getMangaInfo(titulo);
+				OnePiece frame = new OnePiece(manga);
 				frame.setVisible(true);
 			}
 		});

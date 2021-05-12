@@ -37,22 +37,37 @@ public class Kimetsu extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JLabel mangaDescripcion = new JLabel("");
+		mangaDescripcion.setVerticalAlignment(SwingConstants.TOP);
+		mangaDescripcion.setHorizontalAlignment(SwingConstants.TRAILING);
+		mangaDescripcion.setFont(new Font("Comic Sans MS", Font.PLAIN, 14));
+		mangaDescripcion.setForeground(Color.WHITE);
+		mangaDescripcion.setBounds(289, 116, 389, 244);
+		contentPane.add(mangaDescripcion);
+		mangaDescripcion.setText("<html>"+manga.getDescripcion()+"</html>");
+	
+		
+		JLabel mangaPrecio = new JLabel("\r\n");
+		String precio = String.valueOf(manga.getPrecio());
+		mangaPrecio.setForeground(Color.WHITE);
+		mangaPrecio.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		mangaPrecio.setBounds(299, 371, 97, 23);
+		contentPane.add(mangaPrecio);
+		mangaPrecio.setText("Precio="+precio);
+		
+		JLabel mangaGenero = new JLabel("");
+		mangaGenero.setForeground(Color.WHITE);
+		mangaGenero.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		mangaGenero.setBounds(292, 61, 252, 44);
+		contentPane.add(mangaGenero);
+		mangaGenero.setText("Genero= "+manga.getGenero());
+		
 		JLabel mangaTitulo = new JLabel("");
-		mangaTitulo.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		mangaTitulo.setBounds(422, 21, 193, 34);
 		mangaTitulo.setForeground(Color.WHITE);
-		
-		mangaTitulo.setHorizontalAlignment(SwingConstants.CENTER);
-		mangaTitulo.setBounds(289, 66, 379, 260);
+		mangaTitulo.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
 		contentPane.add(mangaTitulo);
-		mangaTitulo.setText(manga.getDescripcion());
-		
-		
-		JLabel lblNewLabel_2 = new JLabel("Kimetsu no Yaiba");
-		lblNewLabel_2.setBounds(422, 21, 193, 34);
-		lblNewLabel_2.setForeground(Color.WHITE);
-		lblNewLabel_2.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
-		contentPane.add(lblNewLabel_2);
-		
+		mangaTitulo.setText(manga.getTitulo());
 	
 		
 		JButton btnComprar = new JButton("Comprar\r\n");
@@ -70,6 +85,7 @@ public class Kimetsu extends JFrame {
 		lblNewLabel_1.setBounds(289, 0, 397, 414);
 		lblNewLabel_1.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_mainMenu.jpg"));
 		contentPane.add(lblNewLabel_1);
+		
 		
 
 	
