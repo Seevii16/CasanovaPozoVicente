@@ -17,7 +17,7 @@ public class Mangas {
 		return mangas;
 	}
 	public Manga getManga(String titulo) {
-		ResultSet mangaBD = Conexion.EjecutarSentencia("SELECT * FROM mangas WHERE NOMBRE='"+titulo+"';");
+		ResultSet mangaBD = Conexion.EjecutarSentencia("SELECT * FROM mangas WHERE TITULO='"+titulo+"';");
 		Manga manga = new controlador.Helper().resultadoSetObjeto(mangaBD);
 		System.out.println(manga);
 		return manga;
