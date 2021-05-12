@@ -18,9 +18,6 @@ public Manga(int idManga, String titulo, String descripcion, String genero, doub
     this.precio = precio;
   }
 
-public Manga(int idManga, String titulo, String descripcion, Double precio) {
-}
-
 public int getIdManga() {
     return idManga;
   }
@@ -59,5 +56,8 @@ public int getIdManga() {
 
   public void setPrecio(double precio) {
     this.precio = precio;
+  }
+  public String toString() {
+	  return super.toString() + "Titulo :"+titulo+", Descripcion :"+descripcion+", Genero: "+genero+", Precio: "+precio;
   }
 }

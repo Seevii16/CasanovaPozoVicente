@@ -47,4 +47,7 @@ public int getIdUsuario() {
   public void setContrasenia(String contrasenia) {
     this.contrasenia = contrasenia;
   }
+  public String toString() {
+	  return super.toString() + "Nombre :"+nombre+", Contraseña :"+email+", Email: "+contrasenia;
+  }
 }
