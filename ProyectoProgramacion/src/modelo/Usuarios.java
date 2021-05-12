@@ -34,7 +34,7 @@ public class Usuarios {
 	public boolean checkNombreContrasenia(String nombre, String contrasenia) {
 		System.out.println("SELECT * FROM usuarios WHERE NOMBRE='"+nombre+"' AND CONTRASEÑA='"+contrasenia+"';");
 		ResultSet usuarioBD = Conexion.EjecutarSentencia("SELECT * FROM usuarios WHERE NOMBRE='"+nombre+"' AND CONTRASEÑA='"+contrasenia+"';");
-		System.out.println(usuarioBD.toString());
+		System.out.println(usuarioBD);
 		try {
 			return usuarioBD.next();
 		} catch (SQLException e) {
