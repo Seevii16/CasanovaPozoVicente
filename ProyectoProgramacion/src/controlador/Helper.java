@@ -21,7 +21,7 @@ public class Helper {
 			while (resultados.next()) {
 				int idUsuario = resultados.getInt("idUsuario");
 				String nombre = resultados.getString("nombre");
-				String contrasenia = resultados.getString("contraseÃ±a");
+				String contrasenia = resultados.getString("contraseña");
 				String email = resultados.getString("email");
 				arraylist.add(new Usuario(idUsuario, nombre, contrasenia, email));
 			}
@@ -34,21 +34,23 @@ public class Helper {
 
 	public ArrayList MangasArrayList(ResultSet resultados) {
 
-		ArrayList<Manga> arraylist = new ArrayList<Manga>();
+		ArrayList<Manga> arraylistManga = new ArrayList<Manga>();
 		try {
 			while (resultados.next()) {
 				int idManga = resultados.getInt("idManga");
 				String titulo = resultados.getString("titulo");
 				String descripcion = resultados.getString("descripcion");
 				Double precio = resultados.getDouble("precio");
-				arraylist.add(new Manga(idManga, titulo, descripcion, precio));
+				String genero = resultados.getString("genero");
+				arraylistManga.add(new Manga(idManga, titulo, descripcion, genero, precio));
+				
 			}
 		} catch (SQLException e) {
 			JOptionPane.showMessageDialog(null, "Error en la consulta de mangas");
 
 		}
 
-		return arraylist;
+		return arraylistManga;
 
 	}
 
@@ -59,7 +61,8 @@ public class Helper {
 				String titulo = resultado.getString("titulo");
 				String descripcion = resultado.getString("descripcion");
 				Double precio = resultado.getDouble("precio");
-				Manga manga = new Manga(idManga, titulo, descripcion, precio);
+				String genero = resultado.getString("genero");
+				Manga manga = new Manga(idManga, titulo, descripcion, genero, precio);
 				return manga;
 			}
 		} catch (SQLException e) {
