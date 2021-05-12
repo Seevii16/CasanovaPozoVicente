@@ -1,5 +1,8 @@
 package vista;
 import vista.Generos.*;
+import modelo.Mangas;
+import controlador.MangaInfo;
+import beans.Manga;
 import vista.Generos.Mangas.*;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -7,6 +10,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import beans.Manga;
+
 import java.awt.Font;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
@@ -96,7 +102,9 @@ public class MainMenu extends JFrame {
 		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Kimetsu frame = new Kimetsu();
+				String titulo = "Kimetsu_No_Yaiba";
+				Manga manga = new controlador.MangaInfo().getMangaInfo(titulo);
+				Kimetsu frame = new Kimetsu(manga);
 				frame.setVisible(true);
 			}
 		});
