@@ -29,18 +29,6 @@ public class MainMenu extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainMenu frame = new MainMenu();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
@@ -159,6 +147,12 @@ public class MainMenu extends JFrame {
 		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setBounds(24, 26, 162, 57);
 		contentPane.add(lblNewLabel_1);
+		
+		JLabel UsuarioNombre = new JLabel("");
+		UsuarioNombre.setForeground(Color.WHITE);
+		UsuarioNombre.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		UsuarioNombre.setBounds(452, 40, 197, 23);
+		contentPane.add(UsuarioNombre);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Mangas Populares");
 		lblNewLabel_1_1.setForeground(Color.WHITE);

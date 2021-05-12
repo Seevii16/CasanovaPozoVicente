@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import beans.Manga;
 import beans.Usuario;
 
 public class Usuarios {
@@ -23,6 +24,12 @@ public class Usuarios {
 		return usuario;
 	}
 	
+	public Usuario getNombre(String nombre) {
+		ResultSet usuarioBD = Conexion.EjecutarSentencia("SELECT * FROM mangas WHERE NOMBRE='"+nombre+"';");
+		Usuario usuario = new controlador.Helper().resultSet2Object(usuarioBD);
+		System.out.println(usuario);
+		return usuario;
+	}
 	
 	public Usuario mostrarUsuario(){
 		ResultSet usuarioBD = Conexion.EjecutarSentencia("SELECT * FROM usuarios;");

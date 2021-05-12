@@ -55,6 +55,14 @@ public class Kimetsu extends JFrame {
 		contentPane.add(mangaPrecio);
 		mangaPrecio.setText("Precio="+precio);
 		
+		JLabel mangaId = new JLabel("");
+		mangaId.setHorizontalAlignment(SwingConstants.RIGHT);
+		mangaId.setForeground(Color.WHITE);
+		mangaId.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		mangaId.setBounds(536, 70, 132, 26);
+		contentPane.add(mangaId);
+		mangaId.setText("ID= "+manga.getIdManga());
+		
 		JLabel mangaGenero = new JLabel("");
 		mangaGenero.setForeground(Color.WHITE);
 		mangaGenero.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
@@ -85,6 +93,7 @@ public class Kimetsu extends JFrame {
 		lblNewLabel_1.setBounds(289, 0, 397, 414);
 		lblNewLabel_1.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_mainMenu.jpg"));
 		contentPane.add(lblNewLabel_1);
+		
 		
 		
 
