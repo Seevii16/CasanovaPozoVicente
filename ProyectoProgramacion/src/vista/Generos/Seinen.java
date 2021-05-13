@@ -1,4 +1,9 @@
 package vista.Generos;
+import modelo.Mangas;
+
+import controlador.MangaInfo;
+import beans.Manga;
+import vista.Generos.Mangas.*;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -93,7 +98,9 @@ public class Seinen extends JFrame {
 		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Kimetsu frame = new Kimetsu();
+				String titulo = "Kimetsu No Yaiba";
+				Manga manga = new controlador.MangaInfo().getMangaInfo(titulo);
+				Kimetsu frame = new Kimetsu(manga);
 				frame.setVisible(true);
 			}
 		});

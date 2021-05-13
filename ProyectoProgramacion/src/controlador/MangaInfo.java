@@ -8,6 +8,8 @@ import modelo.Mangas;
 
 public class MangaInfo {
 	
+	/*Recogo la informacion del manga que le indico con el titulo */
+	
 	public Manga getMangaInfo (String titulo) {
 		return new modelo.Mangas().getManga(titulo);
 	}

@@ -9,6 +9,8 @@ import beans.Manga;
 import beans.Usuario;
 
 public class Usuarios {
+	
+	/*Hago un arraylist y recojo todos los usuarios de la bbdd */
 
 	
 	public ArrayList<Usuario> gets() {

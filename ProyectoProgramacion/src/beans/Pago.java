@@ -5,19 +5,21 @@ public class Pago {
   int idPago;
   Manga idManga;
   Usuario idUsuario;
-  String fechaPago;
   double total;
   
 
-  public Pago(int idPago, Manga idManga, Usuario idUsuario, String fechaPago, double total) {
+  public Pago(int idPago, Manga idManga, Usuario idUsuario, Double total) {
     this.idPago = idPago;
     this.idManga = idManga;
     this.idUsuario = idUsuario;
-    this.fechaPago = fechaPago;
     this.total = total;
   }
 
-  public int getIdPago() {
+  public Pago(int idPago2, int idManga2, int idUsuario2, Double total2) {
+	// TODO Auto-generated constructor stub
+}
+
+public int getIdPago() {
     return idPago;
   }
 
@@ -41,13 +43,7 @@ public class Pago {
     this.idUsuario = idUsuario;
   }
 
-  public String getFechaPago() {
-    return fechaPago;
-  }
 
-  public void setFechaPago(String fechaPago) {
-    this.fechaPago = fechaPago;
-  }
 
   public double getTotal() {
     return total;

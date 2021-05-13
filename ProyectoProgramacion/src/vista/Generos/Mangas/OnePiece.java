@@ -68,6 +68,14 @@ public class OnePiece extends JFrame {
 		mangaTitulo.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
 		contentPane.add(mangaTitulo);
 		mangaTitulo.setText(manga.getTitulo());
+		
+		JLabel mangaId = new JLabel("");
+		mangaId.setHorizontalAlignment(SwingConstants.RIGHT);
+		mangaId.setForeground(Color.WHITE);
+		mangaId.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		mangaId.setBounds(536, 70, 132, 26);
+		contentPane.add(mangaId);
+		mangaId.setText("ID= "+manga.getIdManga());
 	
 		
 		JButton btnComprar = new JButton("Comprar\r\n");
@@ -78,7 +86,7 @@ public class OnePiece extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("\r\n");
 		lblNewLabel.setBounds(0, 0, 279, 414);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\One Piece.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\One Piece_2.png"));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("\r\n");

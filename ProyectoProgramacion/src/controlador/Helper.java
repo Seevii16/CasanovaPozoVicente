@@ -31,7 +31,26 @@ public class Helper {
 
 		return arraylist;
 	}
+	public ArrayList PagosArrayList(ResultSet resultados) {
 
+		ArrayList<Pago> arraylistPago = new ArrayList<Pago>();
+		try {
+			while (resultados.next()) {
+				int idPago = resultados.getInt("idPago");
+				int idManga = resultados.getInt("idManga");
+				int idUsuario = resultados.getInt("idUsuario");
+				Double total = resultados.getDouble("total");
+				arraylistPago.add(new Pago(idPago,idManga,idUsuario,total));
+				
+			}
+		} catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, "Error en la consulta de pagos");
+
+		}
+
+		return arraylistPago;
+
+	}
 	public ArrayList MangasArrayList(ResultSet resultados) {
 
 		ArrayList<Manga> arraylistManga = new ArrayList<Manga>();

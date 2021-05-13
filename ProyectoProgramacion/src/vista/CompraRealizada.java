@@ -15,18 +15,21 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import bbdd.Conexion;
-
-public class LoginCompletado extends JFrame {
+public class CompraRealizada extends JFrame {
 
 	private JPanel contentPane;
 
-
+	/**
+	 * Launch the application.
+	 */
 	
-	public LoginCompletado() {
+	/**
+	 * Create the frame.
+	 */
+	public CompraRealizada() {
 		setResizable(false);
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\icono.png"));
-		setTitle("Inicio Sesion completado :D");
+		setIconImage(Toolkit.getDefaultToolkit().getImage(".\\src\\imagenes\\icono.png"));
+		setTitle("Compra realizada con exito :D");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 533, 368);
 		contentPane = new JPanel();
@@ -51,13 +54,13 @@ public class LoginCompletado extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\dance.gif"));
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Has iniciado sesion con \r\n ");
+		JLabel lblNewLabel_1 = new JLabel("La compra ha sido realizada\r\n ");
 		lblNewLabel_1.setForeground(Color.WHITE);
 		lblNewLabel_1.setBounds(264, 84, 241, 60);
 		lblNewLabel_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 21));
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("exito :D\r\n");
+		JLabel lblNewLabel_1_1 = new JLabel("con exito :D\r\n");
 		lblNewLabel_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1.setBounds(330, 156, 97, 60);
 		lblNewLabel_1_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 21));
@@ -73,4 +76,3 @@ public class LoginCompletado extends JFrame {
 		contentPane.add(lblNewLabel_3);
 	}
 }
-

@@ -3,6 +3,7 @@ import beans.Manga;
 
 import controlador.*;
 import modelo.Mangas;
+import vista.Comprar;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -79,6 +80,13 @@ public class Kimetsu extends JFrame {
 	
 		
 		JButton btnComprar = new JButton("Comprar\r\n");
+		btnComprar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Comprar frame = new Comprar();
+				frame.setVisible(true);
+				
+			}
+		});
 		btnComprar.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		btnComprar.setBounds(509, 371, 159, 23);
 		contentPane.add(btnComprar);

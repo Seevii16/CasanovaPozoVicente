@@ -45,50 +45,50 @@ public class MainMenu extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Shonen\r\n");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton botonShonen = new JButton("Shonen\r\n");
+		botonShonen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Shonen frame = new Shonen();
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton.setBounds(22, 82, 164, 57);
-		contentPane.add(btnNewButton);
-		JButton btnNewButton_1 = new JButton("Shojo\r\n");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		botonShonen.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		botonShonen.setBounds(22, 82, 164, 57);
+		contentPane.add(botonShonen);
+		JButton botonShojo = new JButton("Shojo\r\n");
+		botonShojo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Shojo frame = new Shojo();
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton_1.setBounds(22, 152, 164, 57);
-		contentPane.add(btnNewButton_1);
+		botonShojo.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		botonShojo.setBounds(22, 152, 164, 57);
+		contentPane.add(botonShojo);
 		
-		JButton btnNewButton_2 = new JButton("Seinen\r\n");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		JButton botonSeinen = new JButton("Seinen\r\n");
+		botonSeinen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Seinen frame = new Seinen();
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton_2.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton_2.setBounds(22, 220, 164, 57);
-		contentPane.add(btnNewButton_2);
+		botonSeinen.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		botonSeinen.setBounds(22, 220, 164, 57);
+		contentPane.add(botonSeinen);
 		
-		JButton btnNewButton_1_1 = new JButton("Terror");
-		btnNewButton_1_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton_1_1.setBounds(22, 286, 164, 57);
-		contentPane.add(btnNewButton_1_1);
+		JButton botonTerror = new JButton("Terror");
+		botonTerror.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		botonTerror.setBounds(22, 286, 164, 57);
+		contentPane.add(botonTerror);
 		
-		JButton btnNewButton_2_1 = new JButton("Comedia\r\n");
-		btnNewButton_2_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton_2_1.setBounds(22, 354, 164, 57);
-		contentPane.add(btnNewButton_2_1);
+		JButton botonComedia = new JButton("Comedia\r\n");
+		botonComedia.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		botonComedia.setBounds(22, 354, 164, 57);
+		contentPane.add(botonComedia);
 		
-		JButton btnNewButton_3 = new JButton("");
-		btnNewButton_3.addActionListener(new ActionListener() {
+		JButton botonKimetsu = new JButton("");
+		botonKimetsu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				String titulo = "Kimetsu No Yaiba";
 				Manga manga = new controlador.MangaInfo().getMangaInfo(titulo);
@@ -96,9 +96,9 @@ public class MainMenu extends JFrame {
 				frame.setVisible(true);
 			}
 		});
-		btnNewButton_3.setIcon(new ImageIcon(".\\src\\imagenes\\Kimetsu_no_Yaiba.png"));
-		btnNewButton_3.setBounds(206, 82, 141, 222);
-		contentPane.add(btnNewButton_3);
+		botonKimetsu.setIcon(new ImageIcon(".\\src\\imagenes\\Kimetsu_no_Yaiba.png"));
+		botonKimetsu.setBounds(206, 82, 141, 222);
+		contentPane.add(botonKimetsu);
 		
 		JButton btnNewButton_3_1 = new JButton("");
 		btnNewButton_3_1.addActionListener(new ActionListener() {
@@ -116,7 +116,9 @@ public class MainMenu extends JFrame {
 		JButton btnNewButton_3_2 = new JButton("");
 		btnNewButton_3_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				DragonBallSuper frame = new DragonBallSuper();
+				String titulo = "Dragon ball Super";
+				Manga manga = new controlador.MangaInfo().getMangaInfo(titulo);
+				DragonBallSuper frame = new DragonBallSuper(manga);
 				frame.setVisible(true);
 			}
 		});
