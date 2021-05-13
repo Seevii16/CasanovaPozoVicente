@@ -58,8 +58,7 @@ public class MainMenu extends JFrame {
 		JButton botonShojo = new JButton("Shojo\r\n");
 		botonShojo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Shojo frame = new Shojo();
-				frame.setVisible(true);
+				
 			}
 		});
 		botonShojo.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
@@ -69,8 +68,7 @@ public class MainMenu extends JFrame {
 		JButton botonSeinen = new JButton("Seinen\r\n");
 		botonSeinen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Seinen frame = new Seinen();
-				frame.setVisible(true);
+			
 			}
 		});
 		botonSeinen.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));

@@ -80,8 +80,7 @@ public class Shonen extends JFrame {
 		JButton btnNewButton_3 = new JButton("");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Kimetsu frame = new Kimetsu();
-				frame.setVisible(true);
+			
 			}
 		});
 		btnNewButton_3.setIcon(new ImageIcon(".\src\\imagenes\\fullmetal.jpg"));

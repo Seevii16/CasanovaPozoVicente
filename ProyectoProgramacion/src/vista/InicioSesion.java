@@ -2,7 +2,6 @@ package vista;
 
 import java.awt.BorderLayout;
 
-import sonidos.*;
 
 import java.awt.EventQueue;
 
