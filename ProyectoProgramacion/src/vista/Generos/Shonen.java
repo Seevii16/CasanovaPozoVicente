@@ -1,6 +1,4 @@
 package vista.Generos;
-import vista.Generos.Mangas.*;
-import vista.*;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -16,6 +14,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import beans.Manga;
+import vista.InicioSesion;
+
+import vista.Generos.Mangas.Hunter;
+import vista.Generos.Mangas.Fullmetal;
+import vista.Generos.Mangas.Shingeki;
+
 
 public class Shonen extends JFrame {
 
@@ -52,64 +58,99 @@ public class Shonen extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("Shonen\r\n");
-		btnNewButton.setBackground(new Color(255, 0, 0));
-		btnNewButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton.setBounds(22, 82, 164, 57);
-		contentPane.add(btnNewButton);
-		JButton btnNewButton_1 = new JButton("Shojo\r\n");
-		btnNewButton_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton_1.setBounds(22, 152, 164, 57);
-		contentPane.add(btnNewButton_1);
+		JButton botonShonen = new JButton("Shonen\r\n");
+		botonShonen.setBackground(Color.RED);
+		botonShonen.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Shonen frame = new Shonen();
+				frame.setVisible(true);
+			}
+		});
+		botonShonen.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		botonShonen.setBounds(22, 82, 164, 57);
+		contentPane.add(botonShonen);
+		JButton botonShojo = new JButton("Shojo\r\n");
+		botonShojo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
+		botonShojo.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		botonShojo.setBounds(22, 152, 164, 57);
+		contentPane.add(botonShojo);
 		
-		JButton btnNewButton_2 = new JButton("Seinen\r\n");
-		btnNewButton_2.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton_2.setBounds(22, 220, 164, 57);
-		contentPane.add(btnNewButton_2);
-		
-		JButton btnNewButton_1_1 = new JButton("Terror");
-		btnNewButton_1_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton_1_1.setBounds(22, 286, 164, 57);
-		contentPane.add(btnNewButton_1_1);
-		
-		JButton btnNewButton_2_1 = new JButton("Comedia\r\n");
-		btnNewButton_2_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		btnNewButton_2_1.setBounds(22, 354, 164, 57);
-		contentPane.add(btnNewButton_2_1);
-		
-		JButton btnNewButton_3 = new JButton("");
-		btnNewButton_3.addActionListener(new ActionListener() {
+		JButton botonSeinen = new JButton("Seinen\r\n");
+		botonSeinen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			
 			}
 		});
-		btnNewButton_3.setIcon(new ImageIcon(".\src\\imagenes\\fullmetal.jpg"));
-		btnNewButton_3.setBounds(196, 82, 141, 222);
-		contentPane.add(btnNewButton_3);
+		botonSeinen.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		botonSeinen.setBounds(22, 220, 164, 57);
+		contentPane.add(botonSeinen);
 		
-		JButton btnNewButton_3_1 = new JButton("");
-		btnNewButton_3_1.setIcon(new ImageIcon(".\\src\\imagenes\\hunter_x_hunter.jpg"));
-		btnNewButton_3_1.setBounds(368, 82, 141, 222);
-		contentPane.add(btnNewButton_3_1);
+		JButton botonTerror = new JButton("Terror");
+		botonTerror.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		botonTerror.setBounds(22, 286, 164, 57);
+		contentPane.add(botonTerror);
 		
-		JButton btnNewButton_3_2 = new JButton("");
-		btnNewButton_3_2.setIcon(new ImageIcon(".\\src\\imagenes\\shingeki-no-kyojin.jpg"));
-		btnNewButton_3_2.setBounds(531, 82, 141, 222);
-		contentPane.add(btnNewButton_3_2);
+		JButton botonComedia = new JButton("Comedia\r\n");
+		botonComedia.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		botonComedia.setBounds(22, 354, 164, 57);
+		contentPane.add(botonComedia);
+		
+		JButton botonFullmetal = new JButton("");
+		botonFullmetal.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String titulo = "Fullmetal Alchemist";
+				Manga manga = new controlador.MangaInfo().getMangaInfo(titulo);
+				Fullmetal frame = new Fullmetal(manga);
+				frame.setVisible(true);
+			}
+		});
+		botonFullmetal.setIcon(new ImageIcon(".\\src\\imagenes\\fullmetal.jpg"));
+		botonFullmetal.setBounds(206, 82, 141, 222);
+		contentPane.add(botonFullmetal);
+		
+		JButton botonHunter = new JButton("");
+		botonHunter.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String titulo = "Hunter x Hunter";
+				Manga manga = new controlador.MangaInfo().getMangaInfo(titulo);
+				Hunter frame = new Hunter(manga);
+				frame.setVisible(true);
+			}
+		});
+		botonHunter.setIcon(new ImageIcon(".\\src\\imagenes\\hunter_x_hunter.jpg"));
+		botonHunter.setBounds(368, 82, 141, 222);
+		contentPane.add(botonHunter);
+		
+		JButton botonShingeki = new JButton("");
+		botonShingeki.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String titulo = "Shingeki no Kyojin";
+				Manga manga = new controlador.MangaInfo().getMangaInfo(titulo);
+				Shingeki frame = new Shingeki(manga);
+				frame.setVisible(true);
+			}
+		});
+		botonShingeki.setIcon(new ImageIcon(".\\src\\imagenes\\shingeki-no-kyojin.jpg"));
+		botonShingeki.setBounds(531, 82, 141, 222);
+		contentPane.add(botonShingeki);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("Fullmetal Alchemist");
 		lblNewLabel_1_2.setForeground(Color.WHITE);
 		lblNewLabel_1_2.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
-		lblNewLabel_1_2.setBounds(196, 286, 141, 57);
+		lblNewLabel_1_2.setBounds(216, 286, 151, 57);
 		contentPane.add(lblNewLabel_1_2);
 		
-		JLabel lblNewLabel_1_2_1 = new JLabel("Hunter x Hunter\r\n");
+		JLabel lblNewLabel_1_2_1 = new JLabel("Hunter x Hunter");
 		lblNewLabel_1_2_1.setForeground(Color.WHITE);
 		lblNewLabel_1_2_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
 		lblNewLabel_1_2_1.setBounds(378, 286, 131, 57);
 		contentPane.add(lblNewLabel_1_2_1);
 		
-		JLabel lblNewLabel_1_2_1_1 = new JLabel("Shingeki no Kyojin");
+		JLabel lblNewLabel_1_2_1_1 = new JLabel("Shingeki no Kyojin\r\n");
 		lblNewLabel_1_2_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_2_1_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
 		lblNewLabel_1_2_1_1.setBounds(541, 286, 131, 57);
@@ -121,13 +162,17 @@ public class Shonen extends JFrame {
 		lblNewLabel_1.setBounds(24, 26, 162, 57);
 		contentPane.add(lblNewLabel_1);
 		
+		JLabel UsuarioNombre = new JLabel("");
+		UsuarioNombre.setForeground(Color.WHITE);
+		UsuarioNombre.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		UsuarioNombre.setBounds(452, 40, 197, 23);
+		contentPane.add(UsuarioNombre);
+		
 		JLabel lblNewLabel_1_1 = new JLabel("Shonen");
 		lblNewLabel_1_1.setForeground(Color.WHITE);
 		lblNewLabel_1_1.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
 		lblNewLabel_1_1.setBounds(196, 26, 489, 57);
 		contentPane.add(lblNewLabel_1_1);
-		
-		
 		
 		JButton btnNewButton_4 = new JButton("Cambiar de usuario\r\n");
 		btnNewButton_4.addActionListener(new ActionListener() {
@@ -146,6 +191,8 @@ public class Shonen extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_mainMenu.jpg"));
 		lblNewLabel.setBounds(0, 0, 705, 437);
 		contentPane.add(lblNewLabel);
+		
+		
 		
 		
 		

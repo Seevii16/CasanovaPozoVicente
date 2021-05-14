@@ -8,6 +8,7 @@ import java.awt.Toolkit;
 import controlador.MangaInfo;
 import beans.Manga;
 import modelo.Mangas;
+import vista.Comprar;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,6 +17,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class DragonBallSuper extends JFrame {
 
@@ -81,6 +84,13 @@ public class DragonBallSuper extends JFrame {
 	
 		
 		JButton btnComprar = new JButton("Comprar\r\n");
+		btnComprar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Comprar frame = new Comprar();
+				frame.setVisible(true);
+				
+			}
+		});
 		btnComprar.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		btnComprar.setBounds(509, 371, 159, 23);
 		contentPane.add(btnComprar);

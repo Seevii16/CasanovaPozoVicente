@@ -1,13 +1,12 @@
 package vista.Generos.Mangas;
-import modelo.Mangas;
-import vista.Comprar;
-import beans.Manga;
-import controlador.MangaInfo;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,23 +15,18 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class OnePiece extends JFrame {
+import beans.Manga;
+import vista.Comprar;
+
+public class Shingeki extends JFrame {
 
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
 
-	/**
-	 * Create the frame.
-	 */
-	public OnePiece(Manga manga) {
+	public Shingeki(Manga manga) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(".\\src\\imagenes\\icono.png"));
-		setTitle("One Piece");
+		setTitle("Shingeki no Kyojin");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 694, 453);
 		contentPane = new JPanel();
@@ -58,6 +52,14 @@ public class OnePiece extends JFrame {
 		contentPane.add(mangaPrecio);
 		mangaPrecio.setText("Precio="+precio);
 		
+		JLabel mangaId = new JLabel("");
+		mangaId.setHorizontalAlignment(SwingConstants.RIGHT);
+		mangaId.setForeground(Color.WHITE);
+		mangaId.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
+		mangaId.setBounds(536, 70, 132, 26);
+		contentPane.add(mangaId);
+		mangaId.setText("ID= "+manga.getIdManga());
+		
 		JLabel mangaGenero = new JLabel("");
 		mangaGenero.setForeground(Color.WHITE);
 		mangaGenero.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
@@ -71,14 +73,6 @@ public class OnePiece extends JFrame {
 		mangaTitulo.setFont(new Font("Comic Sans MS", Font.PLAIN, 20));
 		contentPane.add(mangaTitulo);
 		mangaTitulo.setText(manga.getTitulo());
-		
-		JLabel mangaId = new JLabel("");
-		mangaId.setHorizontalAlignment(SwingConstants.RIGHT);
-		mangaId.setForeground(Color.WHITE);
-		mangaId.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
-		mangaId.setBounds(536, 70, 132, 26);
-		contentPane.add(mangaId);
-		mangaId.setText("ID= "+manga.getIdManga());
 	
 		
 		JButton btnComprar = new JButton("Comprar\r\n");
@@ -96,13 +90,14 @@ public class OnePiece extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("\r\n");
 		lblNewLabel.setBounds(0, 0, 279, 414);
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Documents\\GitHub\\CasanovaPozoVicente\\ProyectoProgramacion\\src\\imagenes\\One Piece_2.png"));
+		lblNewLabel.setIcon(new ImageIcon(".\\src\\imagenes\\shingeki-no-kyojin2.jpg"));
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("\r\n");
 		lblNewLabel_1.setBounds(289, 0, 397, 414);
 		lblNewLabel_1.setIcon(new ImageIcon(".\\src\\imagenes\\fondo_mainMenu.jpg"));
 		contentPane.add(lblNewLabel_1);
+		
 		
 		
 

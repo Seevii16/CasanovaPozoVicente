@@ -15,6 +15,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import ficheros.CrearFichero;
+
 public class CompraRealizada extends JFrame {
 
 	private JPanel contentPane;
@@ -41,6 +43,7 @@ public class CompraRealizada extends JFrame {
 		botonMenu.setFont(new Font("Comic Sans MS", Font.PLAIN, 13));
 		botonMenu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				CrearFichero.crearFicherito();
 				MainMenu frame = new MainMenu();
 				frame.setVisible(true);
 				dispose();
